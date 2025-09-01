@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "Marca",
+    "description": "Marcas de vehículos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "paisOrigen": {
+      "type": "string",
+      "required": true
+    },
+    "modelos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modelo.modelo",
+      "mappedBy": "marca"
+    }
+  }
+}

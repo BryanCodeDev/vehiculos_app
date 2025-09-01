@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "versiones",
+  "info": {
+    "singularName": "version",
+    "pluralName": "versiones",
+    "displayName": "Version",
+    "description": "Versiones de modelos de vehículos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "motor": {
+      "type": "string",
+      "required": true
+    },
+    "transmision": {
+      "type": "enumeration",
+      "enum": ["Manual", "Automática", "CVT", "Secuencial"],
+      "required": true
+    },
+    "modelo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::modelo.modelo",
+      "inversedBy": "versiones"
+    }
+  }
+}
