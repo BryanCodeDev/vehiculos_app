@@ -22,8 +22,13 @@
     },
     "transmision": {
       "type": "enumeration",
-      "enum": ["Manual", "Automática", "CVT", "Secuencial"],
-      "required": true
+      "required": true,
+      "enum": [
+        "Manual",
+        "Automática",
+        "CVT",
+        "Secuencial"
+      ]
     },
     "modelo": {
       "type": "relation",
